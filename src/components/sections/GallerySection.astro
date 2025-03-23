@@ -3,14 +3,13 @@ import SectionLayout from './SectionLayout.astro';
 
 const bookImages = [
   { src: '/mock-up2.jpg', alt: 'Hard cover book mockup' },
-  { src: '/mock-up1.png', alt: 'Paperback book mockup' },
-  { src: '/mock-up3.jpg', alt: 'Hard cover with person mockup' },
+  { src: '/mock-up1.jpg', alt: 'Paperback book mockup' },
 ];
 ---
 
 <SectionLayout bgColor="grey">
   <div class="max-w-7xl mx-auto text-center">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {
         bookImages.map((image) => (
           <div

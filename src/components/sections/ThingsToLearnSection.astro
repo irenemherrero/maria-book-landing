@@ -1,17 +1,18 @@
 ---
 import SectionLayout from './SectionLayout.astro';
+import { COLORS } from '../../lib/colors';
 
 const THINGS_TO_LEARN_LIST = [
-  'Build trust and create a safe space for your mentees.',
-  'Master the art of active listening to strengthen mentor-mentee relationships.',
-  'Conduct impactful first one-on-one meetings with confidence.',
-  'Set clear, actionable goals that align with career growth.',
-  'Provide constructive and honest feedback effectively.',
-  'Guide mentees through challenging situations with confidence.',
-  'Develop a structured approach to performance reviews.',
-  'Use mentor cheat sheets to streamline mentoring sessions.',
-  'Help mentees bounce back from setbacks and stay motivated.',
-  'Turn mentoring strategies into long-lasting impact.',
+  'Ilustraciones claras y explicaciones simples para facilitar la comprensión de los remedios homeopáticos.',
+  'Accesible y aplicable en la práctica diaria: Un manual de consulta rápida que simplifica lo complejo.',
+  'Descubre tratamientos menos agresivos y adaptados a cada individuo.',
+  'Relaciona síntomas, características del paciente y principios homeopáticos con precisión',
+  'Diseñado para médicos, farmacéuticos y terapeutas que buscan ampliar sus recursos de intervención.',
+  'Explora cómo la homeopatía puede combinarse con la medicina convencional para mejorar la calidad de vida del paciente.',
+  'Mejora tu enfoque terapéutico con un método holístico y personalizado.',
+  'Aprende a aplicar la homeopatía en situaciones reales con ilustraciones y explicaciones claras.',
+  'Explora su impacto en la prevención, el alivio y la recuperación de diversas afecciones.',
+  'Descubre cómo la homeopatía puede usarse en bebés, embarazadas, ancianos, polimedicados y deportistas.',
 ];
 ---
 
@@ -20,8 +21,7 @@ const THINGS_TO_LEARN_LIST = [
   layout="text-center"
   extraStyles="max-w-4xl mx-auto"
 >
-  <h2 class="text-2xl font-bold mb-4">10 Things This Book Will Teach You</h2>
-  <p class="text-lg text-gray-700 mb-6">Learn how to...</p>
+  <h2 class="text-2xl font-bold mb-12">10 cosas que puedes aprender...</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left space-y-4">
     {
@@ -33,7 +33,10 @@ const THINGS_TO_LEARN_LIST = [
                 key={index}
                 class={`flex items-center ${index !== 0 && 'mt-4'}`}
               >
-                <span class="flex items-center justify-center w-8 h-8 bg-yellow-400 font-bold text-sm rounded-full shrink-0 mr-3">
+                <span
+                  style={{ background: COLORS.primary, color: 'white' }}
+                  class="flex items-center justify-center w-8 h-8 font-bold text-sm rounded-full shrink-0 mr-3"
+                >
                   {colIndex * 5 + index + 1}
                 </span>
                 <span class="w-full">{text}</span>
@@ -45,5 +48,5 @@ const THINGS_TO_LEARN_LIST = [
     }
   </div>
 
-  <p class="mt-6 text-gray-600">...and much more.</p>
+  <p class="mt-6 text-gray-600">...y mucho más.</p>
 </SectionLayout>
