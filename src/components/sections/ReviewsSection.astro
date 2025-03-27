@@ -1,9 +1,17 @@
+---
+import GetCopyButton from '../ui/GetCopyButton.astro';
+import UnderlineStroke from '../ui/UnderlineStroke.astro';
+---
+
 <section class="py-16 px-6 max-w-4xl mx-auto">
   <div class="text-center mb-10">
-    <h2
-      class="text-3xl font-bold relative inline-block transform hover:scale-105 transition-all opacity-100"
-    >
-      Qué dicen los lectores
+    <h2 class="text-3xl font-bold text-center">
+      <span class="font-bold">Qué dicen los lectores</span>
+      <UnderlineStroke
+        svgHeight="20"
+        pathD="M 60 20 Q 20 5 170 5 T 150 5"
+        width="2"
+      />
     </h2>
   </div>
   <blockquote class="mt-6 italic">
@@ -23,4 +31,9 @@
     “Me parece muy práctico el tener los medicamentos básicos en un manual. Bien
     explicado y dibujos ayudan bastante. ¡Muchas gracias!”
   </blockquote>
+  <div
+    class="mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center"
+  >
+    <GetCopyButton />
+  </div>
 </section>

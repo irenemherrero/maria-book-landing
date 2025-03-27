@@ -1,23 +1,20 @@
 ---
 import SectionLayout from './SectionLayout.astro';
-import { LINKEDIN_URL } from '../../lib/constants';
+import { COLORS } from '../../lib/colors';
+import UnderlineStroke from '../ui/UnderlineStroke.astro';
 ---
 
-<SectionLayout
-  bgColor="grey"
-  extraStyles="max-w-4xl mx-auto"
-  layout="text-center"
->
-  <h2 class="text-2xl font-bold mb-4 text-center">
-    Conoce a las autoras y al ilustrador
+<SectionLayout extraStyles="max-w-4xl mx-auto" layout="text-center">
+  <h2 class="text-3xl font-bold text-center">
+    <span class="font-bold">Conoce a las autoras y al ilustrador</span>
+    <UnderlineStroke
+      svgHeight="20"
+      pathD="M 0 5 Q 10 10 200 5 T 200 5"
+      width="2"
+    />
   </h2>
   <div>
-    <img
-      src="/foto-raquel.jpg"
-      alt="First author Raquel"
-      class="mx-auto mt-6 w-40 h-40 rounded-full border-4 border-white shadow-lg text-center object-cover"
-    />
-    <p class="pt-6 font-bold">Raquel Cámara Rica</p>
+    <p class="pt-14 font-bold">Raquel Cámara Rica</p>
     <p>(Valladolid, 1955)</p>
     <p class="mt-4 mb-8 text-gray-700 leading-relaxed px-4 md:px-8">
       Licenciada en Farmacia y especialista en Análisis Clínicos. A lo largo de
@@ -27,6 +24,15 @@ import { LINKEDIN_URL } from '../../lib/constants';
       formación en la UNED y ha obtenido un postgrado en Homeopatía Clínica por
       la Cátedra de Boiron, consolidando así su experiencia en el ámbito de la
       medicina integrativa.
+    </p>
+    <p class="mt-4 mb-8 text-gray-700 leading-relaxed px-4 md:px-8">
+      Ganadora del premio a mejor comunicación en la Jornada PRESCRIBO
+      HOMEOPATÍA 2014 con este <a
+        href="/poster.jpg"
+        target="_blank"
+        class="text-blue-500 underline"
+        style={`color: ${COLORS.primary}`}>póster</a
+      >.
     </p>
   </div>
   <div>
